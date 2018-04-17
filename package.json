@@ -1,0 +1,35 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server/server.js",
+    "heroku-postnuild": "npm run build:prod"
+  },
+  "engines": {
+    "node": "8.11.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jin827/weather-app.git"
+  },
+  "author": "Jiah Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jin827/weather-app/issues"
+  },
+  "homepage": "https://github.com/Jin827/weather-app#readme",
+  "dependencies": {
+    "@google/maps": "^0.4.5",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "dark-sky": "^1.1.2",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.2",
+    "node-fetch": "^1.7.3",
+    "nodemon": "^1.12.1",
+    "openweathermap-node": "^1.1.2",
+    "request": "^2.83.0"
+  }
+}
