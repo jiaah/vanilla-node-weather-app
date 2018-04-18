@@ -61,7 +61,7 @@
 @media screen and (min-width: 1024px) {
 
     #section-weather {
-        background-image: url('img/bg-1.jpg');
+        background-image: url('../img/bg-1-min.jpg');
     }
 
     h2 {

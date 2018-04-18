@@ -177,13 +177,13 @@
         const backgroundImg = document.getElementById('section-weather');
 
         if (temperature > 20) {
-            return backgroundImg.style.backgroundImage = "url('resources/css/img/clear-sky.png')";
+            return backgroundImg.style.backgroundImage = "url('resources/img/clear-sky.png')";
         }
         if (temperature > 0) {
-            return backgroundImg.style.backgroundImage = "url('resources/css/img/cloud.png')";
+            return backgroundImg.style.backgroundImage = "url('resources/img/cloud.png')";
         }
         if (temperature <= 0) {
-            return backgroundImg.style.backgroundImage = "url('resources/css/img/snow.jpg')";
+            return backgroundImg.style.backgroundImage = "url('resources/img/snow-min.jpg')";
         }
 
     }
