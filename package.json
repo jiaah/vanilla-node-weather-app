@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server/server.js",
+    "start": "http-server -p 8080",
+    "server": "nodemon server/server.js",
     "heroku-postnuild": "npm run build:prod"
   },
   "engines": {
