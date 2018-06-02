@@ -71,31 +71,15 @@ h1 {
     margin-right: 10px;
 }
 
-.icon-portfolio,
-.icon-linkedin,
-.icon-github {
-    font-size: 1.7em;
-    color: #fff;
-    text-align: center;
-    -webkit-transition: color .2s;
-    transition: color .2s;
+[CLASS*='icon-'] {
+    height: 28px;
+    width: 28px;
 }
 
-.icon-portfolio {
-    margin-right: .1em;
-}
-
-.icon-portfolio:hover {
-    color: #dd4b39;
-}
-
-.icon-linkedin:hover {
-    color: #007bb5;
-}
-
-.icon-github:hover {
-    color: #fae596;
-}
+#github-outline { stroke: #FB3C03; }
+#github-inline { fill: #FB3C03; }
+#linkedin-outline { fill: #0077B5; }
+#linkedin-inline { stroke: #0077B5; }
 
 
 /* ---------------------------------------- */

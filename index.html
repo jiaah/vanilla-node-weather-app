@@ -11,7 +11,6 @@
     <meta name="description" content="Local weather application.">
 
     <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" type="text/css" href="vendors/css/weather-icons.min.css">
     <link type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:200i,300,300i,400" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="resources/css/style.css">
@@ -20,18 +19,34 @@
 </head>
 
 <body>
-
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+        <defs>
+            <symbol id="icon-portfolio" fill="none" fill-rule="evenodd" viewBox="0 0 50 50">
+                <path stroke="#F5A623" stroke-linejoin="round" stroke-width="4" d="M21 38L13.6370909 38C13.2850909 38 13 37.8252308 13 37.544L13 22M37 22L37 37.52576C37 37.81824 36.7386667 38 36.416 38L29 38"/>
+                <polyline stroke="#F5A623" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" points="37 22 25 11 13 21.702"/>
+                <polyline stroke="#F5A623" stroke-linejoin="round" stroke-width="4" points="21 40 21 30 29 30 29 40"/>
+                <rect width="47" height="47" x="1.5" y="1.5" stroke="#F5A623" stroke-width="3" rx="5"/>
+            </symbol>
+            <symbol id="icon-github" viewBox="0 0 50 50" fill="none" fill-rule="evenodd">
+                <rect id="github-outline" width="47" height="47" x="1.5" y="1.5" stroke-width="3" rx="5"/>
+                <path id="github-inline" d="M13,25.3044338 C13,30.7398363 16.4380429,35.3519218 21.2065134,36.9789169 C21.8069002,37.0922174 22.0256914,36.7122831 22.0256914,36.3859777 C22.0256914,36.0936624 22.015378,35.3201977 22.0094846,34.2936952 C18.671629,35.0369464 17.9673716,32.6440399 17.9673716,32.6440399 C17.4214985,31.2224964 16.634734,30.8440727 16.634734,30.8440727 C15.5451978,30.0804274 16.7172412,30.0962895 16.7172412,30.0962895 C17.921698,30.1831532 18.555235,31.3644997 18.555235,31.3644997 C19.6263544,33.2445326 21.364161,32.7014455 22.0477915,32.3864702 C22.1568188,31.5911007 22.4669572,31.0495243 22.8095092,30.741347 C20.1449707,30.4309036 17.3434114,29.3756983 17.3434114,24.660887 C17.3434114,23.3171431 17.8111974,22.2188837 18.5788084,21.3585552 C18.4557844,21.0473565 18.0439854,19.7965191 18.6966758,18.1030543 C18.6966758,18.1030543 19.7044415,17.7714615 21.9962246,19.3637112 C22.9538967,19.0910346 23.9800792,18.9543187 25.0003683,18.9497867 C26.0199208,18.9543187 27.0461033,19.0910346 28.0052488,19.3637112 C30.2955585,17.7714615 31.3018509,18.1030543 31.3018509,18.1030543 C31.9560146,19.7965191 31.5442156,21.0473565 31.4211916,21.3585552 C32.1902759,22.2188837 32.6543786,23.3171431 32.6543786,24.660887 C32.6543786,29.3870284 29.8491359,30.4271269 27.1757574,30.7322829 C27.6067098,31.1122172 27.9897787,31.8630219 27.9897787,33.0103782 C27.9897787,34.6555014 27.9757819,35.9826279 27.9757819,36.3859777 C27.9757819,36.7153044 28.1916265,37.0975048 28.8008533,36.9774062 C33.5649038,35.3473898 37,30.7390809 37,25.3044338 C37,18.5086701 31.6267227,13 24.998895,13 C18.3732773,13 13,18.5086701 13,25.3044338 Z"/>
+            </symbol>
+            <symbol id="icon-linkedin"  viewBox="0 0 50 50" fill="none" fill-rule="evenodd">
+                <path id="linkedin-outline" d="M17,21 L21,21 L21,35 L17,35 L17,21 Z M18.4875746,20 L18.4577535,20 C16.9666998,20 16,18.8983972 16,17.5033958 C16,16.0798696 16.9952783,15 18.5161531,15 C20.0357853,15 20.9701789,16.0771529 21,17.4993208 C21,18.8943222 20.0357853,20 18.4875746,20 L18.4875746,20 Z M36,35 L31.6524021,35 L31.6524021,27.8235624 C31.6524021,25.9454817 30.972331,24.6646751 29.4768683,24.6646751 C28.3330071,24.6646751 27.6968861,25.5285661 27.4008007,26.3637043 C27.2897687,26.6616878 27.3071174,27.0786034 27.3071174,27.496826 L27.3071174,35 L23,35 C23,35 23.055516,22.2886482 23,21.1333084 L27.3071174,21.1333084 L27.3071174,23.3093727 C27.5615658,22.3579164 28.9379004,21 31.1342527,21 C33.8591637,21 36,22.9957058 36,27.2890217 L36,35 L36,35 Z"/>
+                <rect id="linkedin-inline" width="47" height="47" x="1.5" y="1.5" stroke-width="3" rx="5"/> 
+            </symbol>
+        </defs>
+    </svg>
     <div id="app">
-
         <header>
             <h1>Jh <span class="h1-span">weather</span></h1>
             <ul class="social-links">
                 <li>
-                    <a href="" target="_blank"><i class="ion-ios-briefcase-outline icon-portfolio" title="portfolio"></i></a></li>
+                    <a href="https://www.linkedin.com/in/jiah827/" target="_blank"><svg class="icon-linkedin"><use xlink:href="#icon-linkedin"/></svg></a></li>
                 <li>
-                    <a href="https://www.linkedin.com/in/jiah827/" target="_blank"><i class="ion-social-linkedin-outline icon-linkedin" title="linkedin"></i></a></li>
+                    <a href="https://github.com/Jin827/vanillaJs-weather-app" target="_blank"><svg class="icon-github"><use xlink:href="#icon-github"/></svg></a></li>
                 <li>
-                    <a href="https://github.com/Jin827/vanillaJs-weather-app" target="_blank"><i class="ion-social-github-outline icon-github" title="github"></i></a></li>
+                    <a href="" target="_blank" title="Portfolio coming soon"><svg class="icon-portfolio"><use xlink:href="#icon-portfolio"/></svg></a></li>
             </ul>
         </header>
 
