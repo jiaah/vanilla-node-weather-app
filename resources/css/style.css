@@ -71,16 +71,21 @@ h1 {
     margin-right: 10px;
 }
 
-[CLASS*='icon-'] {
+/* [CLASS*='icon-'] {
     height: 28px;
     width: 28px;
+} */
+
+.icon-linkedin,
+.icon-github,
+.icon-portfolio {
+    height: 28px;
+    width: 28px;
+    margin-left: 6px;
+    margin-right: 6px;
 }
 
-#github-outline { stroke: #FB3C03; }
-#github-inline { fill: #FB3C03; }
-#linkedin-outline { fill: #0077B5; }
-#linkedin-inline { stroke: #0077B5; }
-
+.icon-portfolio { margin-right: 20px; }
 
 /* ---------------------------------------- */
 
