@@ -26,8 +26,8 @@ app.use(bodyParser.json());
 
 
 app.post('/', (req, res) => {
-    return myApi.getUserCityName(req.body)
-        .then(data => myApi.getWeather(data))
+    return myApi.getUserlocation(req.body)
+        .then(data => myApi.getWeatherData(data))
         .then(data => res.status(201).json(data))
         .catch(err => res.status(400).json(err)) 
 });

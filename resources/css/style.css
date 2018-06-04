@@ -37,8 +37,6 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -113,10 +111,7 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    overflow-x: hidden;
 }
 
 .city-input {
@@ -125,8 +120,6 @@ h2 {
     height: 2.2em;
     width: 14em;
     color: #6d6a6a;
-    -webkit-box-flex: 2;
-    -ms-flex-positive: 2;
     flex-grow: 0;
     border: 1px solid #6d6a6a;
     border-top-left-radius: 12px;
@@ -150,8 +143,6 @@ h2 {
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
     color: #333;
-    -webkit-transition: background .2s;
-    -webkit-transition: background .2s, border .2s;
     transition: background .2s, border .2s;
 
 }
@@ -205,11 +196,7 @@ h3 {
 }
 
 #current-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-around;
     font-size: 1.2em;
 }
@@ -225,19 +212,15 @@ h3 {
 
 .current-span {
     font-size: .6em;
-    font-weight: ;
+    font-weight: 200;
     color: #6d6a6a;
 }
 
 .daily-list {
     list-style: none;
     padding: 30px 0 30px 5vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
     width: 100vw;
 }

@@ -27,8 +27,7 @@ const darksky = new DarkSky( process.env.DARKSKY_API_KEY);
 
 module.exports = {
     
-    /* --- Get Users City Name for Geo location service --- */
-    getUserCityName: (position) => {
+    getUserlocation: (position) => {
         const lat = position.lat;
         const lng = position.lng;
         
@@ -51,8 +50,6 @@ module.exports = {
         .catch(err => console.log(err))
     },
     
-    
-    /* --- Get Coodrdinates For City --- */
     getCoordinatesForCity: (cityName) => {
         
         return googleMapsClient.geocode({address: cityName }).asPromise()
@@ -73,9 +70,7 @@ module.exports = {
         
     },
     
-
-    /* --- Get Weather Data --- */
-    getWeather: (cityInfo) => {
+    getWeatherData: (cityInfo) => {
     
         const {
             cityName,
