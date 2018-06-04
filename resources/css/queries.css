@@ -1,8 +1,6 @@
 @media screen and (min-width: 500px) {
 
     h2 {
-        padding-top: 40px;
-        padding-bottom: 10px;
         font-size: 2.5em;
     }
 
@@ -63,10 +61,6 @@
     #section-weather {
         background-image: url('../img/bg-1-min.jpg');
     }
-
-    h2 {
-        padding-top: 70px;
-    }
     
     .current-summary {
         padding-bottom: 50px;
@@ -92,15 +86,6 @@
 
     h2 {
         font-size: 3em;
-    }
-
-    .city-input {
-        height: 1.8em;
-        width: 15em;
-    }
-
-    .btn {
-        height: 1.8em;
     }
 
     #current-list {

@@ -28,9 +28,7 @@
         ['tornado', 'tornado']
     ];
     
-
-    /* --- Display Current Weather Icon --- */
-    function getCurrentIcon(icon) {
+    function getCurrentWeatherIcon(icon) {
 
         const wIcon = document.createElement('li');
         wIcon.innerHTML = '<i></i>';
@@ -44,8 +42,6 @@
         })
     }
 
-
-    /* --- Display Current Weather Data --- */
     function displayCurrentWeather(result) {
         const {
             apparentTemperature,
@@ -73,7 +69,7 @@
             [currentRight, 'VISIBILITY', visibility, ' Km'],
         ];
 
-        // <div class="contents-header"></div> && <div class="current-summary"></div>
+        // div .contents-header && .current-summary
         headerData.forEach(i => {
         
             const d = document.createElement(i[1]);
@@ -82,7 +78,7 @@
             i[0].appendChild(d);
         })
 
-        // <div class="current-list"></div>
+        // div .current-list
         currentData.forEach(i => {
        
             const d = document.createElement('li');
@@ -96,9 +92,7 @@
         document.getElementById('current-list').style.borderBottom = "1px solid #333";
     }
 
-
-    /* --- Display Dates --- */
-    function getDayNames(unixTime) {
+    function getDates(unixTime) {
         
         // Convert Unix Time
         const timeStamp = unixTime
@@ -116,9 +110,7 @@
         dailyList.appendChild(date);
     }
 
-
-    /* --- Display Daily Weather Icon --- */
-    function getDailyIcon(icon) {
+    function getDailyWeatherIcon(icon) {
 
         const dIcon = document.createElement('li');
         dIcon.innerHTML = '<i></i>';
@@ -132,8 +124,6 @@
         })
     }
 
-
-    /* --- Display Daily Weather Data --- */
     function displayDailySummary(result) {
 
         const dailyWeather = result.daily
@@ -147,10 +137,10 @@
             })
             .forEach(data => {
 
-                getDayNames(data.time);
-                getDailyIcon(data.icon);
+                getDates(data.time);
+                getDailyWeatherIcon(data.icon);
 
-                // <div class="daily-list"></div>
+                // div .daily-list
                 const tempData = [
                     [dailyList, 'li', data.tempMax, 'max-temp'], 
                     [dailyList,'li', data.tempMin, 'min-temp']  
@@ -166,9 +156,7 @@
             })
     }
 
-
-    /* --- Get Background Image by Temperature --- */
-    function getBackground(result) {
+    function getBackgroundImgByTemperature(result) {
 
         const {
             temperature
@@ -188,9 +176,6 @@
 
     }
 
-    
-
-    /* --- XMLhttprequest --- */
     function xhrPostRequest(cityInfo) {
         
         return new Promise(function(resolve, reject) {
@@ -215,8 +200,6 @@
         
     }
 
-
-    /* --- Get Users Position --- */
     function getUserPosition() {
    
         return new Promise(function (resolve, reject) {
@@ -228,14 +211,13 @@
             navigator.geolocation.getCurrentPosition(resolve, reject, options);
             
             function reject (err) {
-                alert("Oops! geolocation failed!");
+                alert("Oops! There is a problem with Geolocation API connection. Please use the website search engine.");
                 console.warn(`ERROR(${err.code}): ${err.message}`);
             } 
         });
         
     }
 
-    /* --- Call Display Weather Functions --- */
     function displayWeather(result) {
         
         const classes = [cityInput, conHeader, currentSummary, currentRight, currentLeft, dailyList];
@@ -245,20 +227,18 @@
         classes.forEach(i => i.innerHTML = '');
     
         const promises = [
-            getCurrentIcon(data.weather.icon),
+            getCurrentWeatherIcon(data.weather.icon),
             displayCurrentWeather(data),
             displayDailySummary(data),
-            getBackground(data)
+            getBackgroundImgByTemperature(data)
         ]
         Promise.all(promises)
     }
     
-    
-    /* --- Confirm Geo Location Service With Users --- */
     function geolocationService() {
         
         getUserPosition()
-            .then(result => {
+            .then(result => { 
                 const data = JSON.stringify({
                     "lat": result.coords.latitude,
                     "lng": result.coords.longitude
@@ -273,13 +253,11 @@
             .catch(error => console.log("Something went wrong!"))
     }
  
-
-    /* --- Call Alert Box on Page Load to Confirm Geo Location Service --- */
     geolocationService();
     
     /* --- Search EventListener --- */
     cityForm.addEventListener('submit', function (e) {
-        e.preventDefault(); // prevent the form from submitting
+        e.preventDefault();
 
         const city = cityInput.value;
         const data = JSON.stringify({"city" : city});
@@ -298,4 +276,3 @@
     });
 
 })();
-// wrapping the code in an IIFE to prevent it from polluting the global scope

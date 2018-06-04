@@ -32,6 +32,7 @@ module.exports = {
         const lat = position.lat;
         const lng = position.lng;
         
+        
         return new Promise(function(resolve, reject) {
         
             return helper.getCurrentWeatherByGeoCoordinates(lat, lng, (err, currentWeather) => {
