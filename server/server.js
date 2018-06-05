@@ -37,7 +37,7 @@ app.post('/', (req, res) => {
 app.post('/search', (req, res) => {
     
     return myApi.getCoordinatesForCity(req.body.city)
-        .then(myApi.getWeather)
+        .then(myApi.getWeatherData)
         .then(data => res.status(201).json(data))
         .catch(err => res.status(400).json(err))  
 });

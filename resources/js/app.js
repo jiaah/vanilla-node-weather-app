@@ -219,7 +219,8 @@
     }
 
     function displayWeather(result) {
-        
+        console.log('result: ', result);
+
         const classes = [cityInput, conHeader, currentSummary, currentRight, currentLeft, dailyList];
         const data = JSON.parse(result);
         
