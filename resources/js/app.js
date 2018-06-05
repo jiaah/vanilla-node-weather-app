@@ -165,7 +165,7 @@
         const backgroundImg = document.getElementById('section-weather');
 
         if (temperature > 20) {
-            return backgroundImg.style.backgroundImage = "url('resources/img/clear-sky.png')";
+            return backgroundImg.style.backgroundImage = "url('resources/img/clear-sky.jpg')";
         }
         if (temperature > 0) {
             return backgroundImg.style.backgroundImage = "url('resources/img/cloud.png')";
