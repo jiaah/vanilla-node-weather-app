@@ -15,10 +15,20 @@
     <link rel="stylesheet" type="text/css" href="resources/css/style.css">
     <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/favicons/favicon-16x16.png">
+    <link rel="manifest" href="resources/favicons/site.webmanifest">
+    <link rel="mask-icon" href="resources/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="resources/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="resources/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
-    <svg xmlns="https://www.w3.org/2000/svg" style="display:none">
+    <!-- <svg xmlns="https://www.w3.org/2000/svg" style="display:none">
         <defs>
             <symbol id="icon-portfolio" fill="none" fill-rule="evenodd" width="34" height="34" viewbox="0 0 34 34">
                 <path stroke="#F5A623" stroke-linejoin="round" stroke-width="2" d="M15 26L10.3981818 26C10.1781818 26 10 25.8907692 10 25.715L10 16M25 16L25 25.7036C25 25.8864 24.8366667 26 24.635 26L20 26">
@@ -35,7 +45,7 @@
                     <path fill="#FB3C03" d="M8,17.2283254 C8,21.3048772 10.5785322,24.7639413 14.154885,25.9841877 C14.6051751,26.0691631 14.7692685,25.7842123 14.7692685,25.5394832 C14.7692685,25.3202468 14.7615335,24.7401482 14.7571135,23.9702714 C12.2537217,24.5277098 11.7255287,22.73303 11.7255287,22.73303 C11.3161239,21.6668723 10.7260505,21.3830546 10.7260505,21.3830546 C9.90889837,20.8103205 10.7879309,20.8222171 10.7879309,20.8222171 C11.6912735,20.8873649 12.1664262,21.7733748 12.1664262,21.7733748 C12.9697658,23.1833994 14.2731207,22.7760841 14.7858436,22.5398526 C14.8676141,21.9433255 15.1002179,21.5371432 15.3571319,21.3060102 C13.358728,21.0731777 11.2575585,20.2817737 11.2575585,16.7456653 C11.2575585,15.7378574 11.608398,14.9141628 12.1841063,14.2689164 C12.0918383,14.0355174 11.782989,13.0973893 12.2725068,11.8272907 C12.2725068,11.8272907 13.0283311,11.5785962 14.7471684,12.7727834 C15.4654225,12.568276 16.2350594,12.465739 17.0002763,12.46234 C17.7649406,12.465739 18.5345775,12.568276 19.2539366,12.7727834 C20.9716689,11.5785962 21.7263882,11.8272907 21.7263882,11.8272907 C22.217011,13.0973893 21.9081617,14.0355174 21.8158937,14.2689164 C22.392707,14.9141628 22.7407839,15.7378574 22.7407839,16.7456653 C22.7407839,20.2902713 20.636852,21.0703452 18.631818,21.2992122 C18.9550324,21.5841629 19.242334,22.1472664 19.242334,23.0077837 C19.242334,24.2416261 19.2318365,25.2369709 19.2318365,25.5394832 C19.2318365,25.7864783 19.3937199,26.0731286 19.85064,25.9830547 C23.4236778,24.7605423 26,21.3043107 26,17.2283254 C26,12.1315026 21.9700421,8 16.9991712,8 C12.0299579,8 8,12.1315026 8,17.2283254 Z">
             </symbol>
         </defs>
-    </svg>
+    </svg> -->
     <div id="app">
         <header>
             <h1>Jh <span class="h1-span">weather</span></h1>
@@ -48,6 +58,7 @@
 
         <section id="section-weather">
             <h2>Weather Forecast</h2>
+            <div class="background-img--load"></div>
             <!-- SEARCH BOX -->
             <div class="search-box">
                 <form class="city-form">
