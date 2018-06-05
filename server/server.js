@@ -26,6 +26,7 @@ app.use(bodyParser.json());
 
 
 app.post('/', (req, res) => {
+    
     return myApi.getUserlocation(req.body)
         .then(data => myApi.getWeatherData(data))
         .then(data => res.status(201).json(data))

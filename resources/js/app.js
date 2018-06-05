@@ -43,6 +43,7 @@
     }
 
     function displayCurrentWeather(result) {
+
         const {
             apparentTemperature,
             pressure,
@@ -85,7 +86,6 @@
             d.innerHTML = `<span class="current-span">${i[1]}</span> <br>` + `${i[2]}` + `${i[3]}`;
             i[0].appendChild(d);
         })
-
 
         // weather list border line
         document.getElementById('current-list').style.borderTop = "1px solid #333";
@@ -257,6 +257,7 @@
     
     /* --- Search EventListener --- */
     cityForm.addEventListener('submit', function (e) {
+        
         e.preventDefault();
 
         const city = cityInput.value;
