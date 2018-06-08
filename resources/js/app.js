@@ -264,7 +264,7 @@
         const data = JSON.stringify({"city" : city});
         const obj = {
             data: data,
-            url: "http://localhost:3000/search"
+            url: "http://localhost:3000/search/"
         } 
 
         if (!city) {
