@@ -219,7 +219,7 @@
     }
 
     function displayWeather(result) {
-        
+
         const classes = [cityInput, conHeader, currentSummary, currentRight, currentLeft, dailyList];
         const data = JSON.parse(result);
         
@@ -245,7 +245,7 @@
                 })
                 return {
                     data: data,
-                    url: "http://localhost:3000/"
+                    url: "https://jh-weather.herokuapp.com/index.html/"
                 } ;
             })
             .then(xhrPostRequest)
@@ -264,7 +264,7 @@
         const data = JSON.stringify({"city" : city});
         const obj = {
             data: data,
-            url: "http://localhost:3000/search"
+            url: "https://jh-weather.herokuapp.com/index.html/search"
         } 
 
         if (!city) {
