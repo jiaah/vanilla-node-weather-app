@@ -1,17 +1,15 @@
-
+const request = require('request');
 const express = require('express');
 
-// if (process.env.NODE_ENV !== 'production') { require('dotenv').config() }
 require('dotenv').config()
 const cors = require('cors')
 const bodyParser = require('body-parser');
-const request = require('request');
+const morgan = require('morgan');
 
 const app = express();
+const myApi = require('./api.js');
 
 const port = process.env.PORT || 3000;
-
-const myApi = require('./api.js');
 
 const corsOptions = {
   origin: true,
@@ -20,10 +18,9 @@ const corsOptions = {
 
 app.use(cors());
 app.options('*',cors());
-
+app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
 
 app.post('/', (req, res) => {
     
@@ -33,7 +30,6 @@ app.post('/', (req, res) => {
         .catch(err => res.status(400).json(err)) 
 });
 
-
 app.post('/search', (req, res) => {
     
     return myApi.getCoordinatesForCity(req.body.city)
@@ -42,10 +38,11 @@ app.post('/search', (req, res) => {
         .catch(err => res.status(400).json(err))  
 });
 
-
+app.use('/', (err, req, res, next) => {
+    res.status(err.status || 500).send(err.message || 'INTERNAL SERVER ERROR');
+});
+ 
 app.listen(port, () => {
-   console.log('Server is up!');
- });
-
-console.log("NODE_ENV : " + process.env.NODE_ENV + " mode");
+    console.log(`Server running on ${port}/`);
+});
 
