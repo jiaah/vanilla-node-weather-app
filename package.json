@@ -4,9 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "http-server -p 8080",
-    "server": "nodemon server/server.js",
-    "heroku-postnuild": "npm run build:prod"
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js"
   },
   "proxy": "http://localhost:3000",
   "engines": {
