@@ -8,6 +8,7 @@
     "server": "nodemon server/server.js",
     "heroku-postnuild": "npm run build:prod"
   },
+  "proxy": "http://localhost:3000",
   "engines": {
     "node": "8.11.1"
   },

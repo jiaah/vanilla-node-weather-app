@@ -245,8 +245,8 @@
                 })
                 return {
                     data: data,
-                    url: "http://localhost:3000/"
-                } ;
+                    url: "https://jh-weather.herokuapp.com/"
+                };
             })
             .then(xhrPostRequest)
             .then(displayWeather)
@@ -264,7 +264,7 @@
         const data = JSON.stringify({"city" : city});
         const obj = {
             data: data,
-            url: "http://localhost:3000/search/"
+            url: "https://jh-weather.herokuapp.com/search/"
         } 
 
         if (!city) {
