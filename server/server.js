@@ -22,6 +22,19 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.use('/vendors', express.static('vendors'))
+app.use('/resources', express.static('resources'))
+
+// We neeed an absolute patht for sendFile
+// CWD = current working directory (the directory of the app)
+const CWD = process.cwd();
+
+// set a GET route on /
+app.get('/', (req, res) => {
+    // Whenever we access / in the browser, we will get index.html back
+    res.sendFile(`${CWD}/index.html`);
+})
+
 app.post('/', (req, res) => {
     
     return myApi.getUserlocation(req.body)
@@ -45,4 +58,3 @@ app.use('/', (err, req, res, next) => {
 app.listen(port, () => {
     console.log(`Server running on ${port}/`);
 });
-
