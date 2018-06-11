@@ -57,10 +57,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-
-    #section-weather {
-        background-image: url('../img/bg-1-min.jpg');
-    }
     
     .current-summary {
         padding-bottom: 50px;
