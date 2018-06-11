@@ -16,8 +16,8 @@ const corsOptions = {
   optionsSuccessStatus: 200 
 }
 
-app.use(cors());
-app.options('*',cors());
+// app.use(cors());
+// app.options('*',cors());
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

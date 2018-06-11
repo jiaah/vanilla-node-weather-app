@@ -165,13 +165,13 @@
         const backgroundImg = document.getElementById('section-weather');
 
         if (temperature > 20) {
-            return backgroundImg.style.backgroundImage = "url('resources/img/clear-sky.jpeg')";
+            return backgroundImg.style.backgroundImage = "url('resources/img/clear-sky-min.jpeg')";
         }
         if (temperature > 0) {
-            return backgroundImg.style.backgroundImage = "url('resources/img/cloud.png')";
+            return backgroundImg.style.backgroundImage = "url('resources/img/cloud-min.jpeg')";
         }
         if (temperature <= 0) {
-            return backgroundImg.style.backgroundImage = "url('resources/img/snow-min.jpg')";
+            return backgroundImg.style.backgroundImage = "url('resources/img/snow-min-min.jpeg')";
         }
 
     }
@@ -204,7 +204,6 @@
    
         return new Promise(function (resolve, reject) {
             const options = {
-                timeout: 7000,
                 maximumAge: 0
               };
 

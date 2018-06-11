@@ -88,17 +88,13 @@ h1 {
 /* ---------------------------------------- */
 
 #section-weather {
-    background-image: url('../img/bg-1-min.jpg');
+    background-image: url('../img/bg-1-min-min.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     display: block;
     min-height: 87vh;
 }
 
-.background-img--load { 
-    background-image: url('../img/clear-sky.jpeg');
-    display: none;
-}
 h2 {
     font-size: 2.0em;
     text-align: center;
