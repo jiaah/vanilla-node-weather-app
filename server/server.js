@@ -1,8 +1,6 @@
-const request = require('request');
 const express = require('express');
 
 require('dotenv').config()
-const cors = require('cors')
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 
@@ -11,13 +9,6 @@ const myApi = require('./api.js');
 
 const port = process.env.PORT || 3000;
 
-const corsOptions = {
-  origin: true,
-  optionsSuccessStatus: 200 
-}
-
-// app.use(cors());
-// app.options('*',cors());
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
