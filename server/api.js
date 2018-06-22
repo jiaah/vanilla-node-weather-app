@@ -1,11 +1,3 @@
-const fetch = require("node-fetch");
-
-const GOOGLE_MAPS_API_URL = 'https://maps.googleapis.com/maps/api/geocode/json';
-const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/';
-const DARKSKY_API_URL = 'https://api.darksky.net/forecast/';
-const WEATHER_MAP_API_URL = 'http://api.openweathermap.org/data/2.5/';
-
-/* --- OpenWeatherMap API Library --- */
 const OpenWeatherMapHelper = require("openweathermap-node");
 const helper = new OpenWeatherMapHelper(
     {
@@ -14,13 +6,13 @@ const helper = new OpenWeatherMapHelper(
     }
 );
 
-/* --- GoogleMap API Library --- */
+
 const googleMapsClient = require('@google/maps').createClient({
   key:  process.env.GOOGLE_MAPS_API_KEY,
   Promise: Promise
 });
 
-/* --- DarkSky API Library --- */
+
 const DarkSky = require('dark-sky');
 const darksky = new DarkSky( process.env.DARKSKY_API_KEY);
 

@@ -41,7 +41,7 @@ header {
 }
 
 h1 {
-    color: #fff;
+    color: #333;
     font-size: 1.7em;
     padding: 4px 6px 0 6px;
     background: #f2b632;
@@ -65,11 +65,6 @@ h1 {
     list-style: none;
 }
 
-/* [CLASS*='icon-'] {
-    height: 28px;
-    width: 28px;
-} */
-
 .icon-linkedin,
 .icon-github,
 .icon-portfolio {
@@ -88,7 +83,7 @@ h1 {
 /* ---------------------------------------- */
 
 #section-weather {
-    background-image: url('../img/bg-1-min-min.jpeg');
+    background-image: url('../img/bg-1-min.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     display: block;
@@ -170,7 +165,7 @@ h2 {
 h3 {
     text-align: center;
     font-size: 2em;
-    font-weight: 200;
+    font-weight: 200i;
 }
 
 .current-summary {
@@ -184,7 +179,7 @@ h3 {
     padding-bottom: 8px;
 }
 
-#c-icon {
+.c-icon {
     font-size: 3em;
     color: #252839;
     padding-bottom: 12px;
@@ -192,7 +187,7 @@ h3 {
 
 .w-temperature {
     font-size: 3.0em;
-    font-weight: 200;
+    font-weight: 200i;
 }
 
 #current-list {
@@ -212,7 +207,7 @@ h3 {
 
 .current-span {
     font-size: .6em;
-    font-weight: 200;
+    font-weight: 200i;
     color: #6d6a6a;
 }
 
@@ -230,7 +225,7 @@ h3 {
     padding: 8px 0;
 }
 
-#d-icon {
+.d-icon {
     font-size: 1.7em;
     color: #252839;
     text-align: center;
@@ -258,7 +253,6 @@ footer {
 }
 
 h4 {
-    font-size: .9em;
     color: #fff;
     text-align: center;
     padding: 13px;

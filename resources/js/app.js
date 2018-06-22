@@ -32,7 +32,7 @@
 
         const wIcon = document.createElement('li');
         wIcon.innerHTML = '<i></i>';
-        wIcon.setAttribute('id', 'c-icon');
+        wIcon.setAttribute('class', 'c-icon');
         currentSummary.appendChild(wIcon);
    
         weatherData.forEach(i => {
@@ -57,8 +57,8 @@
 
         const headerData = [
             [conHeader,'H3', result.cityName, ' '], 
-            [conHeader, 'li',summary, ' '], 
-            [currentSummary, 'li', temperature + ' °C', 'w-temperature'], 
+            [conHeader, 'p',summary, ' '], 
+            [currentSummary, 'p', temperature + ' °C', 'w-temperature'], 
         ];
 
         const currentData = [
@@ -114,7 +114,7 @@
 
         const dIcon = document.createElement('li');
         dIcon.innerHTML = '<i></i>';
-        dIcon.setAttribute('id', 'd-icon');
+        dIcon.setAttribute('class', 'd-icon');
         dailyList.appendChild(dIcon);
 
         weatherData.forEach(i => {
@@ -171,7 +171,7 @@
             return backgroundImg.style.backgroundImage = "url('resources/img/cloud-min.jpeg')";
         }
         if (temperature <= 0) {
-            return backgroundImg.style.backgroundImage = "url('resources/img/snow-min-min.jpeg')";
+            return backgroundImg.style.backgroundImage = "url('resources/img/snow-min.jpeg')";
         }
 
     }
@@ -252,9 +252,13 @@
             .catch(error => console.log("Something went wrong!"))
     }
  
-    geolocationService();
+    function askPermissionForGeolocationService() {
+        const permission = confirm("Allow this website to know your location ?");
+        if ( permission ) geolocationService();
+    }
+
+    askPermissionForGeolocationService();
     
-    /* --- Search EventListener --- */
     cityForm.addEventListener('submit', function (e) {
         
         e.preventDefault();

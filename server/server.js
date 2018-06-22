@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 
 const app = express();
-const myApi = require('./api.js');
+const myApi = require('./api-min.js');
 
 const port = process.env.PORT || 3000;
 
@@ -22,8 +22,8 @@ const CWD = process.cwd();
 
 // set a GET route on /
 app.get('/', (req, res) => {
-    // Whenever we access / in the browser, we will get index.html back
-    res.sendFile(`${CWD}/index.html`);
+     // Whenever we access / in the browser, we will get index.html back
+    if (app.get('env') !== 'production') res.sendFile(`${CWD}/index.html`);
 })
 
 app.post('/', (req, res) => {
