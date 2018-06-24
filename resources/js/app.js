@@ -32,12 +32,11 @@
 
         const wIcon = document.createElement('li');
         wIcon.innerHTML = '<i></i>';
-        wIcon.setAttribute('class', 'c-icon');
         currentSummary.appendChild(wIcon);
    
         weatherData.forEach(i => {
             if ( icon === i[0] ) {
-                return wIcon.setAttribute('class', `wi wi-${i[1]}`);
+                return wIcon.setAttribute('class', `c-icon wi wi-${i[1]}`);
             }
         })
     }
@@ -114,12 +113,11 @@
 
         const dIcon = document.createElement('li');
         dIcon.innerHTML = '<i></i>';
-        dIcon.setAttribute('class', 'd-icon');
         dailyList.appendChild(dIcon);
 
         weatherData.forEach(i => {
             if ( icon === i[0] ) {
-                return dIcon.setAttribute('class', `wi wi-${i[1]}`);
+                return dIcon.setAttribute('class', `d-icon wi wi-${i[1]}`);
             }
         })
     }
@@ -257,7 +255,7 @@
         if ( permission ) geolocationService();
     }
 
-    askPermissionForGeolocationService();
+    window.onload = askPermissionForGeolocationService;
     
     cityForm.addEventListener('submit', function (e) {
         
