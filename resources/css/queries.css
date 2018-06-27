@@ -28,6 +28,10 @@
     .daily-list {
         padding-left: 7vw;
     }
+
+    #section-weather {
+        background-image: url('../img/bg-1-min.jpeg');
+    }
 }
 
 @media screen and (min-width: 900px) {
