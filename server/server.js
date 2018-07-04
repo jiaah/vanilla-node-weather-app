@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 
 const app = express();
-const myApi = require('./api.js');
+const myApi = require('./api-min.js');
 
 const port = process.env.PORT || 3000;
 
@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-    
+    console.log("hello", req.body);
     return myApi.getUserlocation(req.body)
         .then(data => myApi.getWeatherData(data))
         .then(data => res.status(201).json(data))
