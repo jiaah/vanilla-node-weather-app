@@ -4,10 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server/server-min.js",
-    "server": "nodemon server/server-min.js"
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js"
   },
-  "proxy": "http://localhost:3000",
   "engines": {
     "node": "8.11.1"
   },
