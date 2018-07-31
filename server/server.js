@@ -18,16 +18,19 @@ app.use('/resources', express.static('resources'))
 
 // We neeed an absolute patht for sendFile
 // CWD = current working directory (the directory of the app)
-const CWD = process.cwd();
+// const CWD = process.cwd();
 
 // set a GET route on /
+// app.get('/', (req, res) => {
+//     // Whenever we access / in the browser, we will get index.html back
+//     res.sendFile(`${CWD}/index.html`);
+// })
 app.get('/', (req, res) => {
-    // Whenever we access / in the browser, we will get index.html back
-    res.sendFile(`${CWD}/index.html`);
-})
+	res.redirect('https://jin827.github.io/jh-weather/');
+});
 
 app.post('/', (req, res) => {
-    console.log("hello", req.body);
+    
     return myApi.getUserlocation(req.body)
         .then(data => myApi.getWeatherData(data))
         .then(data => res.status(201).json(data))
