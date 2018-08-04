@@ -196,7 +196,6 @@
         
         return new Promise(function(resolve, reject) {
             const xhr = createCORSRequest('POST', cityInfo.url);
-            console.log('cityInfo.url: ', cityInfo.url);
 
             if (!xhr) {
 				alert('CORS not supported');

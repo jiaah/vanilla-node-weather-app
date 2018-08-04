@@ -17,14 +17,6 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use((req, res, next) => {
-	res.header('Access-Control-Allow-Origin', '*');
-	res.header('Access-Control-Allow-Methods', 'GET, OPTIONS, PATCH, POST, DELETE');
-	res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-	res.header('Access-Control-Allow-Credentials', true);
-	next();
-});
-
 if (app.get('env') === 'production') {
     app.get('/', (req, res) => {
         res.redirect('https://jin827.github.io/jh-weather/');
