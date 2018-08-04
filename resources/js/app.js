@@ -1,5 +1,7 @@
 
 (function () {
+    const IS_DEBUG_MODE = !!~location.href.indexOf('localhost');
+    const BACKEND_HOST = IS_DEBUG_MODE ? 'http://localhost:3000' : 'https://jh-weather.herokuapp.com';
  
     const app = document.querySelector('#app');
 
@@ -242,7 +244,7 @@
                 })
                 return {
                     data: data,
-                    url: "https://jh-weather.herokuapp.com/"
+                    url: `${BACKEND_HOST}/`
                 };
             })
             .then(xhrPostRequest)
@@ -265,7 +267,7 @@
         const data = JSON.stringify({"city" : city});
         const obj = {
             data: data,
-            url: "https://jh-weather.herokuapp.com/search/"
+            url: `${BACKEND_HOST}/search`
         } 
 
         if (!city) {
