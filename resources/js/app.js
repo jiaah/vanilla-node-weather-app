@@ -176,13 +176,33 @@
 
     }
 
+    function createCORSRequest(method, url) {
+		let xhr = new XMLHttpRequest();
+		if ('withCredentials' in xhr) {
+			// XHR for Chrome/Firefox/Opera/Safari.
+			xhr.open(method, url, true);
+		} else if (typeof XDomainRequest != 'undefined') {
+			// XDomainRequest for IE.
+			xhr = new XDomainRequest();
+			xhr.open(method, url);
+		} else {
+			// CORS not supported.
+			xhr = null;
+		}
+		return xhr;
+    }
+    
     function xhrPostRequest(cityInfo) {
         
         return new Promise(function(resolve, reject) {
-        
-            const xhr = new XMLHttpRequest();
+            const xhr = createCORSRequest('POST', cityInfo.url);
+            console.log('cityInfo.url: ', cityInfo.url);
+
+            if (!xhr) {
+				alert('CORS not supported');
+				return;
+			}
             
-            xhr.open("POST", cityInfo.url, true);
             xhr.onload = function () {
                 if (this.status >= 200 && this.status < 300) {
                     resolve(xhr.response);
@@ -191,13 +211,12 @@
                 }
             };
             xhr.onerror = function () {
-                reject(Error("Network Error"));
+                reject(Error('Network Error'));
+				alert('Woops, there was an error making the request.');
             };
             xhr.setRequestHeader("Content-type", "application/json");
             xhr.send(cityInfo.data);
-        
         })
-        
     }
 
     function getUserPosition() {
@@ -244,7 +263,7 @@
                 })
                 return {
                     data: data,
-                    url: `${BACKEND_HOST}/`
+                    url: `${BACKEND_HOST}/geolocation`
                 };
             })
             .then(xhrPostRequest)

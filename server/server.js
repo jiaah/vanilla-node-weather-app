@@ -7,15 +7,15 @@ const cors = require('cors');
 const app = express();
 const myApi = require('./api-min.js');
 const corsOptions = {
-    origin: 'https://jin827.github.io/jh-weather/',
+    origin: 'https://jin827.github.io/jh-weather',
     optionsSuccessStatus: 200
 }
 const port = process.env.PORT || 3000;
 
+app.use(cors(corsOptions));
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cors(corsOptions));
 
 app.use((req, res, next) => {
 	res.header('Access-Control-Allow-Origin', '*');
@@ -41,7 +41,7 @@ if (app.get('env') === 'production') {
     })
 }
 
-app.post('/', (req, res) => {
+app.post('/geolocation', (req, res) => {
     
     return myApi.getUserlocation(req.body)
         .then(data => myApi.getWeatherData(data))
