@@ -7,7 +7,7 @@ const cors = require('cors');
 const app = express();
 const myApi = require('./api-min.js');
 const corsOptions = {
-    origin: 'https://jin827.github.io/jh-weather',
+    origin: '*',
     optionsSuccessStatus: 200
 }
 const port = process.env.PORT || 3000;
