@@ -72,7 +72,7 @@ h1 {
     margin-left: 15px;
 }
 
-.icon-github { margin-right: 20px; }
+.icon-github { margin-right: 10px; }
 
 /* ---------------------------------------- */
 
@@ -118,7 +118,19 @@ h2 {
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
     border-right: none;
-    padding-left: 10px;
+    -webkit-border-top-left-radius: 12px;
+    -webkit-border-bottom-left-radius: 12px;
+    -webkit-border-right: none;
+    -moz-border-top-left-radius: 12px;
+    -moz-border-bottom-left-radius: 12px;
+    -moz-border-right: none;
+    border-top-right-radius: none;
+    border-bottom-right-radius: none;
+    -webkit-border-top-right-radius: none;
+    -webkit-border-bottom-right-radius: none;
+    -moz-border-top-right-radius: none;
+    -moz-border-bottom-right-radius: none;
+    -moz-border-right: none;
 }
 
 .city-input::placeholder { 
@@ -133,9 +145,15 @@ h2 {
     width: 5em;
     background: #f2b632;
     border: 1px solid #6d6a6a;
-    border-left: none;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
+    border-left: none;
+    -webkit-border-top-right-radius: 12px;
+    -webkit-border-bottom-right-radius: 12px;
+    -webkit-border-left: none;
+    -moz-border-top-right-radius: 12px;
+    -moz-border-bottom-right-radius: 12px;
+    -moz-border-left: none;
     color: #333;
     transition: background .2s, border .2s;
 }
