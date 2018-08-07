@@ -89,7 +89,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     text-align: center;
     font-weight: 400;
     margin: 0;
@@ -105,12 +105,14 @@ h2 {
     display: -ms-flexbox;
     display: flex;
     justify-content: center;
-    font-size: 1.1em;
+    font-size: .9em;
 }
 
 .city-input {
     font-family: 'Montserrat', sans-serif;
     line-height: normal;
+    height: 2.2em;
+    width: 12em;
     color: #6d6a6a;
     padding-left: 15px;
     border: 1px solid #6d6a6a;
