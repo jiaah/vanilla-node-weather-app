@@ -89,7 +89,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2.0em;
+    font-size: 2em;
     text-align: center;
     font-weight: 400;
     margin: 0;
@@ -105,15 +105,14 @@ h2 {
     display: -ms-flexbox;
     display: flex;
     justify-content: center;
+    font-size: 1.1em;
 }
 
 .city-input {
-    font-size: 1em;
     font-family: 'Montserrat', sans-serif;
-    height: 2.2em;
-    width: 14em;
+    line-height: normal;
     color: #6d6a6a;
-    flex-grow: 0;
+    padding-left: 15px;
     border: 1px solid #6d6a6a;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
@@ -124,25 +123,12 @@ h2 {
     -moz-border-top-left-radius: 12px;
     -moz-border-bottom-left-radius: 12px;
     -moz-border-right: none;
-    border-top-right-radius: none;
-    border-bottom-right-radius: none;
-    -webkit-border-top-right-radius: none;
-    -webkit-border-bottom-right-radius: none;
-    -moz-border-top-right-radius: none;
-    -moz-border-bottom-right-radius: none;
-    -moz-border-right: none;
-}
-
-.city-input::placeholder { 
-    font-size: .75em;
-    padding-left: 10px;
 }
 
 .btn {
-    font-size: 1em;
-    font-family: 'Montserrat', sans-serif;
     height: 2.2em;
     width: 5em;
+    font-family: 'Montserrat', sans-serif;
     background: #f2b632;
     border: 1px solid #6d6a6a;
     border-top-right-radius: 12px;
